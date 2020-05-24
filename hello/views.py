@@ -16,7 +16,7 @@ chrome_options.add_argument("--remote-debugging-port=9222")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 # Now you can start using Selenium
-driver.get("https://web.whatsapp.com/")
+driver.get("https://www.google.com")
 
 
 from .models import Greeting
