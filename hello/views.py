@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from selenium import webdriver
 import os
+from io import BytesIO
+from PIL import Image
 
 
 chrome_options = webdriver.ChromeOptions()
@@ -23,7 +25,7 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-    return HttpResponse(driver.page_source)
+    return HttpResponse(BytesIO(driver.find_element_by_tag_name('body').screenshot_as_png))
     #return render(request, "index.html")
 
 
