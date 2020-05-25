@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from selenium import webdriver
 import os
 from io import BytesIO
-from PIL import Image
 
 
 chrome_options = webdriver.ChromeOptions()
