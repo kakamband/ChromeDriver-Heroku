@@ -25,7 +25,7 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-    return HttpResponse(image, mimetype='image/png')
+    return HttpResponse(image, content_type='image/png')
     #return render(request, "index.html")
 
 
