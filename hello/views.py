@@ -18,13 +18,14 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 
 # Now you can start using Selenium
 driver.get("https://web.whatsapp.com/")
+image = BytesIO(driver.find_element_by_tag_name('body').screenshot_as_png)
 
 
 from .models import Greeting
 
 # Create your views here.
 def index(request):
-    return HttpResponse(BytesIO(driver.find_element_by_tag_name('body').screenshot_as_png))
+    return HttpResponse(image, mimetype='image/png')
     #return render(request, "index.html")
 
 
