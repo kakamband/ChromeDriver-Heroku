@@ -13,7 +13,7 @@ chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--remote-debugging-address=0.0.0.0")
 chrome_options.add_argument("--remote-debugging-port=9222")
-chrome_options.addArguments("load-extension=/app/extension/")
+#chrome_options.addArguments("load-extension=/app/extension/")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 # Now you can start using Selenium
